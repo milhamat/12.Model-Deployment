@@ -44,18 +44,6 @@ The application enables users to input patient information manually and receive 
 
 ---
 
-## 📁 Project Structure
-
-```bash
-.
-├── app.py               # Streamlit application
-├── model.joblib         # Trained machine learning model
-├── data/
-│   └── diabetes.csv     # Original dataset (optional)
-├── train_model.ipynb    # Notebook or training script (optional)
-└── README.md            # Documentation
-```
-
 ## ⚙ Installation
 1️⃣ Clone the repository or create the project directory
 git clone <YOUR_REPOSITORY_URL>
