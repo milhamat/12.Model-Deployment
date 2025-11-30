@@ -27,7 +27,8 @@ The dataset includes the following features:
 - HbA1c level  
 - Blood glucose level  
 
-> Visit the official UCI / Kaggle dataset source for licensing information and extended dataset description.
+> Kaggle dataset source for licensing information and extended dataset description.
+[here](https://www.kaggle.com/code/mehmetisik/diabetes-eda-ml-prediction/notebook)
 
 ---
 
