@@ -4,7 +4,7 @@ from joblib import load
 # ==============================
 # Load trained model
 # ==============================
-model = load("model.joblib")   # pastikan nama file sesuai
+model = load("./Experiments/model.joblib")   # pastikan nama file sesuai
 
 # ==============================
 # Column order (MUST match training data)
@@ -30,7 +30,7 @@ input_data = [
     35,             # age
     1,              # hypertension
     0,              # heart_disease
-    'never',        # smoking_history
+    'current',        # smoking_history
     28.5,           # bmi
     5.7,            # HbA1c_level
     140             # blood_glucose_level
@@ -52,6 +52,11 @@ probability = model.predict_proba(df) if hasattr(model, "predict_proba") else No
 # ==============================
 print("\n=== Prediction Result ===")
 print("Prediction:", int(prediction[0]))
+
+if prediction[0] == 1:
+    print("The model predicts that the patient has diabetes.")
+else:
+    print("The model predicts that the patient does not have diabetes.")
 
 if probability is not None:
     print("Probability:", probability[0])
