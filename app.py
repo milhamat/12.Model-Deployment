@@ -30,15 +30,14 @@ COLUMNS = [
 # Streamlit UI
 # ==============================
 st.title("Diabetes Prediction (Demo)")
-st.write("Demo sederhana deployment model menggunakan Streamlit + model.joblib")
 
 st.markdown("### Input Data Pasien")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    unnamed_0 = st.number_input("ID / Unnamed: 0", min_value=0, value=1, step=1)
-    gender = st.selectbox("Gender", ["Male", "Female", "Other"])
+    # unnamed_0 = st.number_input("ID / Unnamed: 0", min_value=0, value=1, step=1)
+    gender = st.selectbox("Gender", ["Male", "Female"])
     age = st.number_input("Age", min_value=0, max_value=120, value=35, step=1)
     hypertension = st.selectbox("Hypertension (0 = No, 1 = Yes)", [0, 1])
 
@@ -46,17 +45,18 @@ with col2:
     heart_disease = st.selectbox("Heart Disease (0 = No, 1 = Yes)", [0, 1])
     smoking_history = st.selectbox(
         "Smoking History",
-        ["never", "former", "current", "ever", "not current", "No Info"]
+        ["non-smoker", "past_smoker", "current"]
     )
     bmi = st.number_input("BMI", min_value=0.0, max_value=80.0, value=28.5, step=0.1)
-    hba1c = st.number_input("HbA1c level", min_value=0.0, max_value=20.0, value=5.7, step=0.1)
+    hba1c = st.number_input("HbA1c level (glycated Hemoglobin)", min_value=0.0, max_value=20.0, value=5.7, step=0.1)
     glucose = st.number_input("Blood Glucose Level", min_value=0.0, max_value=500.0, value=140.0, step=1.0)
 
 # Tombol prediksi
 if st.button("Predict"):
     # Buat DataFrame satu baris
     data = {
-        'Unnamed: 0': unnamed_0,
+        # 'Unnamed: 0': unnamed_0,
+        'Unnamed: 0': 1,  # Dummy value for Unnamed: 0
         'gender': gender,
         'age': age,
         'hypertension': hypertension,
