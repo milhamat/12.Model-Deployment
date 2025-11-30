@@ -53,10 +53,14 @@ probability = model.predict_proba(df) if hasattr(model, "predict_proba") else No
 print("\n=== Prediction Result ===")
 print("Prediction:", int(prediction[0]))
 
+print("=========================\n")
 if prediction[0] == 1:
     print("The model predicts that the patient has diabetes.")
 else:
     print("The model predicts that the patient does not have diabetes.")
-
+    
+print("=========================\n")
 if probability is not None:
     print("Probability:", probability[0])
+    
+
