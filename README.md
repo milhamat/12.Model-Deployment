@@ -53,3 +53,45 @@ The application enables users to input patient information manually and receive 
 │   └── diabetes.csv     # Original dataset (optional)
 ├── train_model.ipynb    # Notebook or training script (optional)
 └── README.md            # Documentation
+```
+
+## ⚙ Installation
+1️⃣ Clone the repository or create the project directory
+git clone <YOUR_REPOSITORY_URL>
+cd <project-folder>
+
+2️⃣ Create and activate a virtual environment (recommended)
+python -m venv venv
+# activate
+# Windows:
+venv\Scripts\activate
+# Linux / macOS:
+source venv/bin/activate
+
+3️⃣ Install the dependencies
+
+## Install manually:
+```
+pip install streamlit pandas scikit-learn joblib numpy
+```
+If training dependencies are needed:
+```
+pip install imbalanced-learn matplotlib seaborn jupyter
+```
+Or install from requirements file (if available):
+```
+pip install -r requirements.txt
+```
+
+## ▶ Running the Streamlit Application
+Make sure app.py and model.joblib are located in the same directory.
+
+Start the application using:
+```
+streamlit run app.py
+```
+After running the command, Streamlit will provide a local URL such as:
+```
+http://localhost:8501
+```
+Open this URL in your browser to interact with the prediction interface.
